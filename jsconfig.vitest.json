@@ -1,9 +1,5 @@
 {
   "extends": "./jsconfig.app.json",
-  "include": [
-    "./lib/declarations/vitest-env.d.ts",
-    "./src/**/__tests__/*",
-  ],
   "exclude": [],
   "compilerOptions": {
     "composite": true,
