@@ -15,6 +15,9 @@ export default mergeConfig(
       exclude: [...configDefaults.exclude],
       setupFiles: ["./lib/vitest/setup.js"],
       root: fileURLToPath(new URL("./", import.meta.url)),
+      transformMode: {
+        web: [/\.[jt]sx$/],
+      },
     },
   })
 );

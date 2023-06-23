@@ -1,0 +1,16 @@
+{
+  "extends": "./jsconfig.app.json",
+  "include": [
+    "vite.d.ts",
+  ],
+  "exclude": [],
+  "compilerOptions": {
+    "composite": true,
+    "lib": [],
+    "types": [
+      "node",
+      "vitest/globals",
+      "jsdom"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "extends": "./lib/jsconfig/jsconfig.dom.json",
+  "include": [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "lib/**/*.js",
+    "lib/**/*.jsx",
+    "vite.d.ts"
+  ],
+  "exclude": [
+    "src/**/__tests__/*"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "types": [
+      "vite/client"
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "~/*": [
+        "./src/*"
+      ]
+    }
+  }
+}
