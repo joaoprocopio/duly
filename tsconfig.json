@@ -2,7 +2,7 @@
   "files": [],
   "references": [
     {
-      "path": "./jsconfig.node.json"
+      "path": "./jsconfig.node.json",
     },
     {
       "path": "./jsconfig.app.json"
