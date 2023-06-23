@@ -4,12 +4,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 
-import { CssBaseline } from "@mui/material";
-import {
-  ThemeProvider,
-  createTheme,
-  StyledEngineProvider,
-} from "@mui/material/styles";
+import StyledEngineProvider from "@mui/material/StyledEngineProvider";
+import CssBaseline from "@mui/material/CssBaseline";
+
+import ThemeProvider from "@mui/material/styles/ThemeProvider";
+import createTheme from "@mui/material/styles/createTheme";
 
 import { router } from "~/router";
 
