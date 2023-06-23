@@ -1,9 +1,7 @@
 {
-  "extends": "./lib/jsconfig/jsconfig.node.json",
+  "extends": "./lib/tsconfig/tsconfig.node.json",
   "include": [
-    "./vite.config.js",
-    "./vitest.config.js",
-    "./playwright.config.js",
+    "./*.config.*",
   ],
   "compilerOptions": {
     "composite": true,
