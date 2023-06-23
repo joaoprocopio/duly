@@ -1,7 +1,8 @@
 {
   "extends": "./jsconfig.app.json",
   "include": [
-    "vite.d.ts",
+    "./declarations/vitest-env.d.ts",
+    "./src/**/__tests__/*",
   ],
   "exclude": [],
   "compilerOptions": {
@@ -9,7 +10,6 @@
     "lib": [],
     "types": [
       "node",
-      "vitest/globals",
       "jsdom"
     ]
   }

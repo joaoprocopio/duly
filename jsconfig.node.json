@@ -1,7 +1,7 @@
 {
   "extends": "@tsconfig/node18/tsconfig.json",
   "include": [
-    "*.config.js",
+    "./*.config.js",
   ],
   "compilerOptions": {
     "composite": true,
