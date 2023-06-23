@@ -4,6 +4,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --ignore-path .gitignore",
+    "format": "prettier --write . --ignore-path .gitignore && npm run lint -- --fix",
     "test": "vitest",
     "preview": "vite preview"
   },
