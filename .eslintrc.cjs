@@ -24,6 +24,12 @@ module.exports = {
     react: {
       version: "18.2",
     },
+    "import/resolver": {
+      node: {
+        paths: ["."],
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
+      },
+    },
   },
   plugins: ["react-refresh"],
   rules: {
