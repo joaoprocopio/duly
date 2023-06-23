@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { StrictMode } from "react";
+
 import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 import CssBaseline from "@mui/material/CssBaseline";
 
@@ -18,11 +20,13 @@ export function App({ children }: Props) {
   });
 
   return (
-    <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        {children}
-      </ThemeProvider>
-    </StyledEngineProvider>
+    <StrictMode>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          {children}
+        </ThemeProvider>
+      </StyledEngineProvider>
+    </StrictMode>
   );
 }
