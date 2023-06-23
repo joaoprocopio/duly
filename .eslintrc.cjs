@@ -12,6 +12,7 @@ module.exports = {
   extends: [
     "airbnb",
     "airbnb/hooks",
+    "plugin:react/jsx-runtime",
     "eslint:recommended",
     "plugin:prettier/recommended",
   ],
@@ -27,5 +28,6 @@ module.exports = {
   plugins: ["react-refresh"],
   rules: {
     "react-refresh/only-export-components": "warn",
+    "import/no-extraneous-dependencies": "off",
   },
 };
