@@ -6,7 +6,8 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "~/router";
 import { App } from "~/app";
 
-const root = createRoot(document.getElementById("__react") as HTMLElement);
+const rootEl = document.getElementById("__react") as HTMLElement;
+const root = createRoot(rootEl);
 
 root.render(
   <App>
