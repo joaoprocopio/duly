@@ -7,7 +7,7 @@ type ThemeStore = {
 };
 
 type ThemeAction = {
-  toggleTheme: () => void;
+  setTheme: () => void;
 };
 
 export const useThemeStore = create<ThemeStore & ThemeAction>()((set) => ({
@@ -16,7 +16,7 @@ export const useThemeStore = create<ThemeStore & ThemeAction>()((set) => ({
       mode: "light",
     },
   }),
-  toggleTheme: () =>
+  setTheme: () =>
     set(({ theme }) => ({
       theme: createTheme({
         palette: {

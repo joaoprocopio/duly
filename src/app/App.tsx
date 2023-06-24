@@ -1,27 +1,24 @@
-import { StrictMode, type ReactNode } from "react";
+import "~/assets/styles/index.css";
+
+import { StrictMode } from "react";
+import { RouterProvider as Router } from "react-router-dom";
 
 import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 import CssBaseline from "@mui/material/CssBaseline";
-
-import Button from "@mui/material/Button";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 
 import { useThemeStore } from "~/stores";
+import { router } from "~/router";
 
-interface Props {
-  children: ReactNode;
-}
-
-export function App({ children }: Props) {
-  const { theme, toggleTheme } = useThemeStore((state) => state);
+export function App() {
+  const { theme } = useThemeStore();
 
   return (
     <StrictMode>
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <Button onClick={() => toggleTheme()}>{theme.palette.mode}</Button>
-          {children}
+          <Router router={router} />
         </ThemeProvider>
       </StyledEngineProvider>
     </StrictMode>
