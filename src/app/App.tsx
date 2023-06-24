@@ -1,29 +1,26 @@
-import type { ReactNode } from "react";
-
-import { StrictMode } from "react";
+import { StrictMode, type ReactNode } from "react";
 
 import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 import CssBaseline from "@mui/material/CssBaseline";
 
+import Button from "@mui/material/Button";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
-import createTheme from "@mui/material/styles/createTheme";
+
+import { useThemeStore } from "~/stores";
 
 interface Props {
   children: ReactNode;
 }
 
 export function App({ children }: Props) {
-  const theme = createTheme({
-    palette: {
-      mode: "dark",
-    },
-  });
+  const { theme, toggleTheme } = useThemeStore((state) => state);
 
   return (
     <StrictMode>
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
           <CssBaseline />
+          <Button onClick={() => toggleTheme()}>{theme.palette.mode}</Button>
           {children}
         </ThemeProvider>
       </StyledEngineProvider>
