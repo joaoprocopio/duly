@@ -1,27 +1,11 @@
 import { create } from "zustand";
 
-import createTheme, { type Theme } from "@mui/material/styles/createTheme";
+import { type ThemeConfig } from "antd";
 
 type ThemeStore = {
-  theme: Theme;
+  theme: ThemeConfig;
 };
 
-type ThemeAction = {
-  toggleTheme: () => void;
-};
-
-export const useThemeStore = create<ThemeStore & ThemeAction>()((set) => ({
-  theme: createTheme({
-    palette: {
-      mode: "light",
-    },
-  }),
-  toggleTheme: () =>
-    set(({ theme }) => ({
-      theme: createTheme({
-        palette: {
-          mode: theme.palette.mode === "light" ? "dark" : "light",
-        },
-      }),
-    })),
+export const useThemeStore = create<ThemeStore>()(() => ({
+  theme: {},
 }));
