@@ -4,51 +4,43 @@
   "env": {
     "browser": true,
     "es2020": true,
-    "node": true,
-    "jest": true
+    "node": true
   },
-  "plugins": ["react-refresh"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "airbnb",
-    "airbnb/hooks",
-    "airbnb-typescript",
+    "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
     "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "react-refresh"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.ts",
+        "**/*.test.tsx"
+      ],
+      "extends": [
+        "plugin:vitest-globals/recommended"
+      ],
+      "env": {
+        "vitest-globals/env": true
+      }
+    }
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": "./tsconfig.eslint.json"
+    "sourceType": "module"
   },
   "settings": {
     "react": {
       "version": "18.2"
-    },
-    "import/resolver": {
-      "node": {
-        "paths": ["."],
-        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"]
-      },
-      "alias": {
-        "map": [
-          ["~", "./src"],
-          ["@", "./"]
-        ],
-        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"]
-      }
     }
   },
   "rules": {
-    "react-refresh/only-export-components": "warn",
-    "import/no-extraneous-dependencies": "off",
-    "import/prefer-default-export": "off",
-    "react/jsx-filename-extension": [
-      "warn",
-      {
-        "extensions": [".ts", ".tsx"]
-      }
-    ]
+    "react-refresh/only-export-components": "warn"
   }
 }
