@@ -1,21 +1,21 @@
-import type { RouteObject } from "react-router-dom";
+import type { RouteObject } from 'react-router-dom'
 
-import { LandingLayout } from "~/layouts";
-import { ErrorPage, LandingPage } from "~/pages";
+import { LandingLayout } from '~/layouts'
+import { ErrorPage, LandingPage } from '~/pages'
 
 export const routes: RouteObject[] = [
   {
-    path: "/",
+    path: '/',
     element: <LandingLayout />,
     children: [
       {
         index: true,
-        element: <LandingPage />,
+        element: <LandingPage />
       },
       {
-        path: "*",
-        element: <ErrorPage />,
-      },
-    ],
-  },
-];
+        path: '*',
+        element: <ErrorPage />
+      }
+    ]
+  }
+]

@@ -14,18 +14,11 @@
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended"
   ],
-  "plugins": [
-    "react-refresh"
-  ],
+  "plugins": ["react-refresh"],
   "overrides": [
     {
-      "files": [
-        "**/*.test.ts",
-        "**/*.test.tsx"
-      ],
-      "extends": [
-        "plugin:vitest-globals/recommended"
-      ],
+      "files": ["**/*.test.ts", "**/*.test.tsx"],
+      "extends": ["plugin:vitest-globals/recommended"],
       "env": {
         "vitest-globals/env": true
       }

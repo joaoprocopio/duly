@@ -1,1 +1,1 @@
-export * from "./LandingLayout";
+export * from './LandingLayout'

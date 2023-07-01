@@ -1,3 +1,3 @@
 export function LandingPage() {
-  return <h1>I am a landing page.</h1>;
+  return <h1>I am a landing page.</h1>
 }
