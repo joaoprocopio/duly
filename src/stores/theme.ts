@@ -1,6 +1,6 @@
-import { create } from 'zustand'
+import { create } from "zustand"
 
-import { type ThemeConfig } from 'antd'
+import { type ThemeConfig } from "antd"
 
 type ThemeStore = {
   theme: ThemeConfig

@@ -1,11 +1,11 @@
-import type { RouteObject } from 'react-router-dom'
+import type { RouteObject } from "react-router-dom"
 
-import { LandingLayout } from '~/layouts'
-import { ErrorPage, LandingPage } from '~/pages'
+import { LandingLayout } from "~/layouts"
+import { ErrorPage, LandingPage } from "~/pages"
 
 export const routes: RouteObject[] = [
   {
-    path: '/',
+    path: "/",
     element: <LandingLayout />,
     children: [
       {
@@ -13,7 +13,7 @@ export const routes: RouteObject[] = [
         element: <LandingPage />
       },
       {
-        path: '*',
+        path: "*",
         element: <ErrorPage />
       }
     ]

@@ -9,7 +9,7 @@ export function ErrorPage() {
   const { pathname } = useLocation()
 
   return (
-    <div className="max-w-4xl mx-auto w-full h-full py-8">
+    <div className="mx-auto h-full w-full max-w-4xl py-8">
       <div className="flex gap-16">
         <div className="m-auto">
           <CloseCircleFilled />
