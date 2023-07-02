@@ -1,5 +1,5 @@
 import "antd/dist/reset.css"
-import "~/assets/styles/index.css"
+import "~/assets/styles/main.css"
 
 import { StrictMode } from "react"
 import { RouterProvider as Router } from "react-router-dom"
