@@ -3,8 +3,10 @@
   "bracketSameLine": true,
   "arrowParens": "always",
   "bracketSpacing": true,
-  "jsxSingleQuote": true,
-  "singleQuote": true,
+  "jsxSingleQuote": false,
+  "singleQuote": false,
   "semi": false,
-  "trailingComma": "none"
+  "trailingComma": "none",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "pluginSearchDirs": false
 }
