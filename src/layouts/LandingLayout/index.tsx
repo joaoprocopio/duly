@@ -8,7 +8,7 @@ export function LandingLayout() {
   return (
     <>
       <Header className="sticky"></Header>
-      <Content>
+      <Content className="mx-auto max-w-4xl p-8">
         <Outlet />
       </Content>
     </>

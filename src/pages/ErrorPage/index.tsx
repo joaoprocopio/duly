@@ -9,7 +9,7 @@ export function ErrorPage() {
   const { pathname } = useLocation()
 
   return (
-    <div className="mx-auto flex h-full w-full max-w-2xl flex-col items-center gap-16 p-8 sm:flex-row">
+    <div className="flex flex-col items-center gap-16 sm:flex-row">
       <ExclamationCircleTwoTone className="text-8xl" />
       <div>
         <Title>Page not found</Title>
