@@ -1,5 +1,5 @@
 {
-  "extends": "./lib/tsconfig/tsconfig.base.json",
+  "extends": "./ts/config/tsconfig.base.json",
   "include": [
     "./lib/declarations/vite-env.d.ts",
     "./src/**/*.ts",

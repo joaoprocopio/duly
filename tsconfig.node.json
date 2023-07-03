@@ -1,5 +1,5 @@
 {
-  "extends": "./lib/tsconfig/tsconfig.node.json",
+  "extends": "./ts/config/tsconfig.node.json",
   "include": ["./*.config.*"],
   "compilerOptions": {
     "composite": true,
