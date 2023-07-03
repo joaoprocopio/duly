@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom"
 
 import { Typography } from "antd"
-import { ExclamationCircleOutlined } from "@ant-design/icons"
+import { ExclamationCircleTwoTone } from "@ant-design/icons"
 
 const { Title, Paragraph, Text } = Typography
 
@@ -9,8 +9,10 @@ export function ErrorPage() {
   const { pathname } = useLocation()
 
   return (
-    <div className="flex flex-col items-center gap-16 sm:flex-row">
-      <ExclamationCircleOutlined className="text-8xl" />
+    <div className="flex items-center gap-8">
+      <Link to="/">
+        <ExclamationCircleTwoTone className="text-8xl" />
+      </Link>
       <div>
         <Title>Page not found</Title>
         <Paragraph className="mb-8">
