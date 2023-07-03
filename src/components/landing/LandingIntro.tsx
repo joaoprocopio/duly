@@ -4,7 +4,7 @@ const { Title } = Typography
 
 export function LandingIntro() {
   return (
-    <div className="text-center">
+    <div id="landing-intro" className="text-center">
       <Title className="mx-auto my-8 max-w-3xl text-5xl">
         Supercharge your React development with Molecule.
       </Title>

@@ -1,11 +1,9 @@
-import { LandingIntro, LandingWhy, LandingAspects } from "~/components"
+import { LandingIntro } from "~/components"
 
 export function LandingPage() {
   return (
     <>
       <LandingIntro />
-      <LandingWhy />
-      <LandingAspects />
     </>
   )
 }
