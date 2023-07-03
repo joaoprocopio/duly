@@ -1,7 +1,6 @@
 import { Outlet, Link } from "react-router-dom"
 
 import { Layout } from "antd"
-
 import { DeploymentUnitOutlined } from "@ant-design/icons"
 
 const { Header, Content } = Layout
@@ -9,10 +8,10 @@ const { Header, Content } = Layout
 export function LandingLayout() {
   return (
     <>
-      <Header className="sticky p-0">
+      <Header className="sticky bg-transparent p-0 ">
         <div className="mx-auto flex h-full max-w-4xl items-center px-8">
-          <Link to="/" className="inline-flex">
-            <DeploymentUnitOutlined className="text-4xl text-white" />
+          <Link to="/" className="inline-flex text-black opacity-80">
+            <DeploymentUnitOutlined className="text text-4xl" />
           </Link>
         </div>
       </Header>

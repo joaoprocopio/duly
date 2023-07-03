@@ -1,3 +1,7 @@
+import { Typography } from "antd"
+
+const { Title } = Typography
+
 export function LandingPage() {
-  return <h1>I am a landing page.</h1>
+  return <Title>Welcome to Molecule.</Title>
 }
