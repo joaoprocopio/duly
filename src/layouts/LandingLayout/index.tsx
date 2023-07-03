@@ -9,13 +9,13 @@ export function LandingLayout() {
   return (
     <>
       <Header className="sticky bg-transparent p-0 ">
-        <div className="mx-auto flex h-full max-w-4xl items-center px-8">
-          <Link to="/" className="inline-flex text-black opacity-80">
-            <DeploymentUnitOutlined className="text text-4xl" />
+        <div className="mx-auto flex h-full max-w-6xl items-center px-8">
+          <Link to="/" className="inline-flex">
+            <DeploymentUnitOutlined className="text text-4xl text-black opacity-80" />
           </Link>
         </div>
       </Header>
-      <Content className="mx-auto max-w-4xl p-8">
+      <Content className="mx-auto max-w-6xl p-8">
         <Outlet />
       </Content>
     </>
