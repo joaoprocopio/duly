@@ -5,10 +5,10 @@ const { Title } = Typography
 export function LandingPage() {
   return (
     <div className="pt-32 text-center">
-      <Title className="mb-8 text-7xl font-semibold">
+      <Title className="mx-auto mb-8 max-w-5xl text-7xl font-semibold">
         Supercharge your React development with Molecule.
       </Title>
-      <Title level={2} className="mx-auto mb-16 max-w-3xl text-xl font-medium">
+      <Title level={2} className="mx-auto mb-12 max-w-3xl text-xl font-medium">
         Molecule comes pre-loaded with a carefully crafted architecture,
         following industry best practices and standards. It provides a solid
         foundation for your React applications, allowing you to hit the ground
