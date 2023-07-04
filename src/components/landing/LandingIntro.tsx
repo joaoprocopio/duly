@@ -15,10 +15,12 @@ export function LandingIntro() {
         matters without setup hassle.
       </Title>
       <div className="mb-64">
-        <Button className="mr-4" type="primary" size="large">
+        <Button shape="round" className="mr-4" type="primary" size="large">
           Why Molecule?
         </Button>
-        <Button size="large">Core aspects</Button>
+        <Button shape="round" size="large">
+          Core aspects
+        </Button>
       </div>
     </div>
   )
