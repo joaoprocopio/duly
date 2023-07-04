@@ -19,7 +19,7 @@ export const routes: RouteObject[] = [
     ]
   },
   {
-    path: "/auth",
+    path: "/auth/:step?",
     element: <LandingLayout simple={true} />,
     children: [
       {
