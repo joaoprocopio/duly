@@ -1,10 +1,12 @@
-import "antd/dist/reset.css"
 import "~/assets/styles/main.css"
+
+import StyledEngineProvider from "@mui/material/StyledEngineProvider"
+import CssBaseline from "@mui/material/CssBaseline"
+
+import ThemeProvider from "@mui/material/styles/ThemeProvider"
 
 import { StrictMode } from "react"
 import { RouterProvider as Router } from "react-router-dom"
-
-import { ConfigProvider, App as AppProvider } from "antd"
 
 import { useThemeStore } from "~/stores"
 import { router } from "~/router"
@@ -14,11 +16,12 @@ export function App() {
 
   return (
     <StrictMode>
-      <ConfigProvider theme={theme}>
-        <AppProvider>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
           <Router router={router} />
-        </AppProvider>
-      </ConfigProvider>
+        </ThemeProvider>
+      </StyledEngineProvider>
     </StrictMode>
   )
 }

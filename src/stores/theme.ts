@@ -1,11 +1,17 @@
+import createTheme, {
+  type ThemeOptions
+} from "@mui/material/styles/createTheme"
+
 import { create } from "zustand"
 
-import { type ThemeConfig } from "antd"
-
 type ThemeStore = {
-  theme: ThemeConfig
+  theme: ThemeOptions
 }
 
 export const useThemeStore = create<ThemeStore>()(() => ({
-  theme: {}
+  theme: createTheme({
+    palette: {
+      mode: "dark"
+    }
+  })
 }))
