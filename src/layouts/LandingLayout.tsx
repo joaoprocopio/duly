@@ -26,7 +26,7 @@ export function LandingLayout({ simple = false }: Props) {
           )}
         </div>
       </Header>
-      <Content className="p-8">
+      <Content>
         <Outlet />
       </Content>
     </>

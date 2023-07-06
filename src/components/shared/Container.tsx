@@ -3,8 +3,10 @@ import { type ReactNode } from "react"
 
 interface Props {
   children: ReactNode
-  centered?: boolean
   maxWidth?: MaxWidthType
+  centered?: boolean
+  horizontalPadding?: boolean
+  verticalPadding?: boolean
 }
 
 type MaxWidthType = "default"
@@ -16,9 +18,15 @@ enum MaxWidthEnum {
 export function Container({
   children,
   maxWidth = "default",
+  horizontalPadding = true,
+  verticalPadding = true,
   centered = false
 }: Props) {
-  const classes = classNames(MaxWidthEnum[maxWidth], { "mx-auto": centered })
+  const classes = classNames(MaxWidthEnum[maxWidth], {
+    "px-8": horizontalPadding,
+    "py-8": verticalPadding,
+    "mx-auto": centered
+  })
 
   return <div className={classes}>{children}</div>
 }
