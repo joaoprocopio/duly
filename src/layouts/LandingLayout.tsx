@@ -12,13 +12,13 @@ interface Props {
 export function LandingLayout({ simple = false }: Props) {
   return (
     <>
-      <Header className="sticky bg-transparent p-0 ">
-        <div className="mx-auto flex h-full max-w-6xl items-center justify-between px-8">
+      <Header className="bg-transparent px-8">
+        <div className="flex h-full items-center justify-between">
           <Link to="/" className="inline-flex">
             <DeploymentUnitOutlined className="text-4xl" />
           </Link>
           {!simple && (
-            <Link to="/auth">
+            <Link to="/auth" className="inline-flex">
               <Button type="primary" shape="round" icon={<UserOutlined />}>
                 Sign in
               </Button>
@@ -26,7 +26,7 @@ export function LandingLayout({ simple = false }: Props) {
           )}
         </div>
       </Header>
-      <Content className="mx-auto max-w-6xl p-8">
+      <Content className="p-8">
         <Outlet />
       </Content>
     </>
