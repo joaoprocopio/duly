@@ -1,7 +1,7 @@
 export function LandingPage() {
   return (
     <>
-      <div>hello world!</div>
+      <div className="h-[2000px]">hello world!</div>
     </>
   )
 }
