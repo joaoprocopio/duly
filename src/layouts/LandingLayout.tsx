@@ -1,34 +1,27 @@
-import { Outlet, Link } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 
-import { Button, Layout } from "antd"
-import { DeploymentUnitOutlined, UserOutlined } from "@ant-design/icons"
+import LocalLibraryOutlinedIcon from "@mui/icons-material/LocalLibraryOutlined"
+import PersonIcon from "@mui/icons-material/Person"
 
-const { Header, Content } = Layout
+import AppBar from "@mui/material/AppBar"
+import Toolbar from "@mui/material/Toolbar"
+import IconButton from "@mui/material/IconButton"
+import Button from "@mui/material/Button"
 
-interface Props {
-  simple?: boolean
-}
-
-export function LandingLayout({ simple = false }: Props) {
+export function LandingLayout() {
   return (
     <>
-      <Header className="bg-transparent px-8">
-        <div className="flex h-full items-center justify-between">
-          <Link to="/" className="inline-flex">
-            <DeploymentUnitOutlined className="text-4xl" />
-          </Link>
-          {!simple && (
-            <Link to="/auth" className="inline-flex">
-              <Button type="primary" shape="round" icon={<UserOutlined />}>
-                Sign in
-              </Button>
-            </Link>
-          )}
-        </div>
-      </Header>
-      <Content>
+      <AppBar component="header" color="transparent" elevation={0}>
+        <Toolbar className="justify-between">
+          <IconButton>
+            <LocalLibraryOutlinedIcon />
+          </IconButton>
+          <Button startIcon={<PersonIcon />}>Sign in</Button>
+        </Toolbar>
+      </AppBar>
+      <main>
         <Outlet />
-      </Content>
+      </main>
     </>
   )
 }

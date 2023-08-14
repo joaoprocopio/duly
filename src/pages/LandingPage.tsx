@@ -1,9 +1,7 @@
-import { LandingIntro } from "~/components"
-
 export function LandingPage() {
   return (
     <>
-      <LandingIntro />
+      <div>hello world!</div>
     </>
   )
 }

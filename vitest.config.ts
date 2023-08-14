@@ -13,7 +13,7 @@ export default mergeConfig(
       reporters: "verbose",
       include: [...configDefaults.include],
       exclude: [...configDefaults.exclude],
-      setupFiles: ["./config/vitest/setup.ts"],
+      setupFiles: ["./lib/vitest/setup.ts"],
       root: fileURLToPath(new URL("./", import.meta.url)),
       transformMode: {
         web: [/\.[jt]sx$/]

@@ -1,6 +1,6 @@
 import { type Config } from "tailwindcss"
 
-const config: Config = {
+export default {
   important: true,
   corePlugins: {
     preflight: false
@@ -10,6 +10,4 @@ const config: Config = {
     extend: {}
   },
   plugins: []
-}
-
-export default config
+} satisfies Config

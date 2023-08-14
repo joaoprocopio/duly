@@ -1,7 +1,7 @@
-import { type RouteObject, Navigate } from "react-router-dom"
+import { type RouteObject } from "react-router-dom"
 
 import { LandingLayout } from "~/layouts"
-import { ErrorPage, LandingPage, AuthPage } from "~/pages"
+import { ErrorPage, LandingPage } from "~/pages"
 
 export const routes: RouteObject[] = [
   {
@@ -15,20 +15,6 @@ export const routes: RouteObject[] = [
       {
         path: "*",
         element: <ErrorPage />
-      }
-    ]
-  },
-  {
-    path: "/auth/:step?",
-    element: <LandingLayout simple={true} />,
-    children: [
-      {
-        index: true,
-        element: <AuthPage />
-      },
-      {
-        path: "*",
-        element: <Navigate to="/auth" />
       }
     ]
   }
