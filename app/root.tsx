@@ -3,7 +3,7 @@ import "@mantine/core/styles.css"
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react"
 import { MantineProvider, ColorSchemeScript } from "@mantine/core"
 
-export default function App() {
+export default function Root() {
   return (
     <html lang="en">
       <head>
