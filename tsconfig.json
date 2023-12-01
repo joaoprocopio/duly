@@ -1,14 +1,14 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.vitest.json"
+  "extends": "@tsconfig/vite-react/tsconfig.json",
+
+  "include": ["./**/*.ts", "./**/*.tsx"],
+
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "types": ["@remix-run/node", "vite/client"],
+    "paths": {
+      "~/*": ["./app/*"]
     }
-  ]
+  }
 }
