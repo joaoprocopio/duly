@@ -8,7 +8,7 @@
     "baseUrl": ".",
     "types": ["@remix-run/node", "vite/client"],
     "paths": {
-      "~/*": ["./app/*"]
+      "~/*": ["./src/*"]
     }
   }
 }
