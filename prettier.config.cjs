@@ -1,5 +1,5 @@
 /** @type {import("prettier").Config} */
-module.exports = {
+const config = {
   semi: false,
   singleQuote: false,
   bracketSameLine: true,
@@ -8,3 +8,5 @@ module.exports = {
   printWidth: 100,
   quoteProps: "consistent"
 }
+
+module.exports = config
