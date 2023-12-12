@@ -6,7 +6,8 @@ export const theme = createTheme({
   components: {
     Container: Container.extend({
       defaultProps: {
-        size: "xl"
+        size: "xl",
+        py: "xl"
       }
     })
   }
