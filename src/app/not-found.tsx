@@ -1,3 +1,5 @@
+import { Container } from "@mantine/core"
+
 export default function RootNotFound() {
-  return <>não encontrada</>
+  return <Container>Página não encontrada</Container>
 }

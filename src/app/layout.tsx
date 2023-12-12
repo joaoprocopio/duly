@@ -1,7 +1,15 @@
-import { ColorSchemeScript, MantineProvider } from "@mantine/core"
+import {
+  AppShell,
+  AppShellHeader,
+  AppShellMain,
+  ColorSchemeScript,
+  Container,
+  MantineProvider
+} from "@mantine/core"
 import "@mantine/core/styles.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import { theme } from "~/app/theme"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -16,8 +24,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ColorSchemeScript />
       </head>
       <body className={inter.className}>
-        <MantineProvider>
-          <main>{children}</main>
+        <MantineProvider theme={theme}>
+          <AppShell header={{ height: 60 }}>
+            <AppShellHeader>
+              <Container>a</Container>
+            </AppShellHeader>
+
+            <AppShellMain>{children}</AppShellMain>
+          </AppShell>
         </MantineProvider>
       </body>
     </html>

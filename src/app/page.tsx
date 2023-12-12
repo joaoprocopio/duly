@@ -1,3 +1,5 @@
+import { Container } from "@mantine/core"
+
 export default function RootPage() {
-  return <>pagina</>
+  return <Container>Página</Container>
 }
