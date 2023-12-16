@@ -1,11 +1,11 @@
-.landing-layout-header {
-  .lyh-container {
+.app-header {
+  .ah-container {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    .lyhc-button {
+    .ahc-button {
       & > svg {
         height: 100%;
         width: 100%;

@@ -1,3 +1,5 @@
+import { Container } from "@mantine/core"
+
 export default function AppRoute() {
-  return <p>app</p>
+  return <Container>app</Container>
 }

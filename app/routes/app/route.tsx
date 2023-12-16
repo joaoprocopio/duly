@@ -3,7 +3,7 @@ import { Outlet } from "@remix-run/react"
 
 import { AppHeader } from "~/components"
 
-export default function LandingLayout() {
+export default function AppLayout() {
   return (
     <>
       <AppHeader />
