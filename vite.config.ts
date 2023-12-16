@@ -6,6 +6,7 @@ import { defineConfig } from "vite"
 installGlobals()
 
 export default defineConfig({
+  envPrefix: "_",
   plugins: [remix()],
   resolve: {
     alias: {

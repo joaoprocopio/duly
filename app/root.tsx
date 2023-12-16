@@ -1,3 +1,5 @@
+import { ColorSchemeScript, Container, MantineProvider, createTheme } from "@mantine/core"
+import "@mantine/core/styles.css"
 import type { LinksFunction, MetaFunction } from "@remix-run/node"
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react"
 
@@ -29,13 +31,27 @@ export default function Root() {
       <head>
         <Meta />
         <Links />
+        <ColorSchemeScript />
       </head>
 
       <body>
-        <ScrollRestoration />
-        <Outlet />
-        <Scripts />
-        <LiveReload />
+        {/* TODO: mover o tema pra um lugar decente */}
+        <MantineProvider
+          theme={createTheme({
+            components: {
+              Container: Container.extend({
+                defaultProps: {
+                  size: "xl",
+                  py: "xl"
+                }
+              })
+            }
+          })}>
+          <ScrollRestoration />
+          <Outlet />
+          <Scripts />
+          <LiveReload />
+        </MantineProvider>
       </body>
     </html>
   )
