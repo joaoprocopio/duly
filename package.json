@@ -1,36 +1,47 @@
 {
   "private": true,
+  "sideEffects": false,
   "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "vite build && vite build --ssr",
+    "dev": "vite dev",
+    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "start": "remix-serve ./build/server/index.js",
+    "typecheck": "tsc"
   },
   "dependencies": {
-    "@mantine/core": "^7.3.1",
-    "@mantine/hooks": "^7.3.1",
-    "@tabler/icons-react": "^2.42.0",
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18"
+    "@mantine/core": "^7.3.2",
+    "@mantine/hooks": "^7.3.2",
+    "@remix-run/node": "^2.4.0",
+    "@remix-run/react": "^2.4.0",
+    "@remix-run/serve": "^2.4.0",
+    "@tabler/icons-react": "^2.44.0",
+    "isbot": "^3.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.0.4",
+    "@remix-run/dev": "^2.4.0",
     "@rushstack/eslint-config": "^3.5.0",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@tsconfig/vite-react": "^3.0.0",
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "postcss": "^8.4.32",
     "postcss-load-config": "^5.0.2",
     "postcss-preset-mantine": "^1.11.1",
     "postcss-simple-vars": "^7.0.1",
     "prettier": "3.1.0",
-    "typescript": "^5"
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
   },
   "engines": {
     "node": ">=18.0.0"
