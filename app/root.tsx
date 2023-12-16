@@ -1,7 +1,9 @@
-import { ColorSchemeScript, Container, MantineProvider, createTheme } from "@mantine/core"
+import { ColorSchemeScript, MantineProvider } from "@mantine/core"
 import "@mantine/core/styles.css"
 import type { LinksFunction, MetaFunction } from "@remix-run/node"
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react"
+
+import { theme } from "~/theme"
 
 export const links: LinksFunction = () => {
   return [
@@ -38,20 +40,9 @@ export default function Root() {
       </head>
 
       <body>
-        {/* TODO: mover o tema pra um lugar decente */}
-        <MantineProvider
-          theme={createTheme({
-            components: {
-              Container: Container.extend({
-                defaultProps: {
-                  size: "xl",
-                  py: "xl"
-                }
-              })
-            }
-          })}>
-          <ScrollRestoration />
+        <MantineProvider theme={theme}>
           <Outlet />
+          <ScrollRestoration />
           <Scripts />
           <LiveReload />
         </MantineProvider>
