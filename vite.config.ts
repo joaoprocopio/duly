@@ -12,5 +12,10 @@ export default defineConfig({
     alias: {
       "~": fileURLToPath(new URL("./app", import.meta.url))
     }
+  },
+  css: {
+    modules: {
+      localsConvention: "camelCaseOnly"
+    }
   }
 })
