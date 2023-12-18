@@ -1,7 +1,7 @@
 {
   "extends": "@tsconfig/vite-react/tsconfig.json",
 
-  "include": ["env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"],
 
   "compilerOptions": {
