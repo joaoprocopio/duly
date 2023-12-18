@@ -8,6 +8,11 @@
     "baseUrl": ".",
     "rootDir": ".",
 
+    "target": "ES2022",
+
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
     "paths": {
       "~/*": ["./app/*"]
     }
