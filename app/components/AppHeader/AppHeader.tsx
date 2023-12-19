@@ -1,7 +1,7 @@
 import { ActionIcon, AppShellHeader, Button, Container } from "@mantine/core"
 import { Link } from "@remix-run/react"
 import { IconChevronRight, IconHexagons } from "@tabler/icons-react"
-import "./AppHeader.scss"
+import "./AppHeader.css"
 
 export default function AppHeader() {
   return (
