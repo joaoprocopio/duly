@@ -2,6 +2,7 @@ import { Button, Card, Container, PasswordInput, TextInput, Title } from "@manti
 import { TransformedValues, useForm } from "@mantine/form"
 import { ActionFunctionArgs, redirect } from "@remix-run/node"
 import { Link, useSubmit } from "@remix-run/react"
+import "./auth._index.css"
 
 export const action = async ({ request }: ActionFunctionArgs) => {
   const formData = await request.formData()
@@ -25,14 +26,14 @@ export default function AuthRoute() {
     submit(values, { method: "post" })
 
   return (
-    <Container>
-      <Card>
-        <Title size="larger">Seja bem-vindo!</Title>
+    <Container className="auth-route">
+      <Card className="ar-card">
+        <Title className="arc-title" size="larger">
+          Seja bem-vindo!
+        </Title>
 
-        <form
-          onSubmit={form.onSubmit(handleSubmit)}
-          style={{ marginTop: "var(--mantine-spacing-md)" }}>
-          <div>
+        <form className="arc-form" onSubmit={form.onSubmit(handleSubmit)}>
+          <div className="arcf-inputs">
             <TextInput
               required
               withAsterisk={false}
@@ -45,21 +46,16 @@ export default function AuthRoute() {
               withAsterisk={false}
               name="password"
               label="Senha"
-              style={{ marginTop: "var(--mantine-spacing-xs)" }}
               {...form.getInputProps("password")}
             />
           </div>
 
-          <div style={{ marginTop: "var(--mantine-spacing-xl)" }}>
+          <div className="arcf-actions">
             <Button type="submit" fullWidth>
               Entrar
             </Button>
-            <Button
-              component={Link}
-              fullWidth
-              to="/auth/registrar"
-              variant="light"
-              style={{ marginTop: "var(--mantine-spacing-xs)" }}>
+
+            <Button component={Link} fullWidth to="/auth/registrar" variant="light">
               Criar conta
             </Button>
           </div>

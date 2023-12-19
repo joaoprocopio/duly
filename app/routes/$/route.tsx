@@ -5,16 +5,16 @@ import "./$.css"
 
 import { AppHeader } from "~/components"
 
-export default function ErrorPage() {
+export default function ErrorRoute() {
   return (
     <>
       <AppHeader />
 
-      <AppShellMain className="error-page-main">
-        <Container>
-          <Card className="epm-card">
+      <AppShellMain>
+        <Container className="error-route">
+          <Card className="er-card">
             <ActionIcon
-              className="epmc-icon"
+              className="erc-icon"
               component={Link}
               to="/"
               variant="transparent"
@@ -22,11 +22,11 @@ export default function ErrorPage() {
               <IconArrowBackUp />
             </ActionIcon>
 
-            <Title className="epmc-title" size="larger">
+            <Title className="erc-title" size="larger">
               Página não encontrada
             </Title>
 
-            <Anchor className="epmc-link" component={Link} to="/">
+            <Anchor className="erc-link" component={Link} to="/">
               Ir para a página inicial
             </Anchor>
           </Card>

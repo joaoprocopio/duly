@@ -1,24 +1,22 @@
-.error-page-main {
-  > div {
-    .epm-card {
-      text-align: center;
+.error-route {
+  .er-card {
+    text-align: center;
 
-      .epmc-icon {
-        margin: 0 auto;
+    .erc-icon {
+      margin: 0 auto;
 
-        > svg {
-          width: 100%;
-          height: 100%;
-        }
+      > svg {
+        width: 100%;
+        height: 100%;
       }
+    }
 
-      .epmc-title {
-        margin-top: var(--mantine-spacing-lg);
-      }
+    .erc-title {
+      margin-top: var(--mantine-spacing-lg);
+    }
 
-      .epmc-link {
-        margin-top: var(--mantine-spacing-md);
-      }
+    .erc-link {
+      margin-top: var(--mantine-spacing-md);
     }
   }
 }
