@@ -4,35 +4,45 @@ require("@rushstack/eslint-config/patch/modern-module-resolution")
 const config = {
   root: true,
   parser: "@typescript-eslint/parser",
-  plugins: ["react", "jsx-a11y", "@typescript-eslint"],
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended"
-  ],
-  parserOptions: {
-    sourceType: "module",
-    ecmaVersion: "latest"
-  },
   env: {
     browser: true,
     commonjs: true,
     es6: true,
     node: true
   },
+  parserOptions: {
+    sourceType: "module",
+    ecmaVersion: "latest",
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
+  plugins: ["@typescript-eslint", "import", "react", "jsx-a11y"],
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
   settings: {
-    react: {
+    "react": {
       version: "detect"
     },
-    formComponents: ["Form"],
-    linkComponents: [
+    "formComponents": ["Form"],
+    "linkComponents": [
       { name: "Link", linkAttribute: "to" },
       { name: "NavLink", linkAttribute: "to" }
-    ]
+    ],
+    "import/internal-regex": "^~/",
+    "import/resolver": {
+      typescript: true,
+      node: true
+    }
   }
 }
 
