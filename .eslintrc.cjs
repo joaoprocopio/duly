@@ -7,8 +7,7 @@ const config = {
   env: {
     browser: true,
     commonjs: true,
-    es6: true,
-    node: true
+    es6: true
   },
   parserOptions: {
     sourceType: "module",
