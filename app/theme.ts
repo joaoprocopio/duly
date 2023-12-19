@@ -4,8 +4,8 @@ export const theme = createTheme({
   components: {
     Container: Container.extend({
       defaultProps: {
-        size: "xl",
-        py: "xl"
+        py: "xl",
+        size: "xl"
       }
     }),
     Card: Card.extend({

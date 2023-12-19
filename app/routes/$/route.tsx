@@ -1,31 +1,32 @@
 import { ActionIcon, Anchor, AppShellMain, Card, Container, Title } from "@mantine/core"
 import { Link } from "@remix-run/react"
 import { IconArrowBackUp } from "@tabler/icons-react"
+import "./$.css"
 
 import { AppHeader } from "~/components"
 
-export default function AuthLayout() {
+export default function ErrorPage() {
   return (
     <>
       <AppHeader />
 
-      <AppShellMain>
+      <AppShellMain className="error-page-main">
         <Container>
-          <Card style={{ textAlign: "center" }}>
+          <Card className="epm-card">
             <ActionIcon
+              className="epmc-icon"
               component={Link}
-              style={{ margin: "0 auto" }}
+              to="/"
               variant="transparent"
-              size="xl"
-              to="/">
-              <IconArrowBackUp style={{ width: "100%", height: "100%" }} />
+              size="xl">
+              <IconArrowBackUp />
             </ActionIcon>
 
-            <Title size="larger" style={{ marginTop: "var(--mantine-spacing-lg)" }}>
+            <Title className="epmc-title" size="larger">
               Página não encontrada
             </Title>
 
-            <Anchor component={Link} style={{ marginTop: "var(--mantine-spacing-md)" }} to="/">
+            <Anchor className="epmc-link" component={Link} to="/">
               Ir para a página inicial
             </Anchor>
           </Card>

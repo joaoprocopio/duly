@@ -1,0 +1,24 @@
+.error-page-main {
+  > div {
+    .epm-card {
+      text-align: center;
+
+      .epmc-icon {
+        margin: 0 auto;
+
+        > svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .epmc-title {
+        margin-top: var(--mantine-spacing-lg);
+      }
+
+      .epmc-link {
+        margin-top: var(--mantine-spacing-md);
+      }
+    }
+  }
+}
