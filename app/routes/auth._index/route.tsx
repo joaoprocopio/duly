@@ -26,7 +26,7 @@ export default function AuthRoute() {
 
   return (
     <Container>
-      <Card withBorder>
+      <Card>
         <Title size="larger">Seja bem-vindo!</Title>
 
         <form
