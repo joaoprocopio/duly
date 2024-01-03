@@ -5,14 +5,14 @@ export const theme = createTheme({
     Container: Container.extend({
       defaultProps: {
         py: "xl",
-        size: "xl"
-      }
+        size: "xl",
+      },
     }),
     Card: Card.extend({
       defaultProps: {
         py: "xl",
-        withBorder: true
-      }
-    })
-  }
+        withBorder: true,
+      },
+    }),
+  },
 })

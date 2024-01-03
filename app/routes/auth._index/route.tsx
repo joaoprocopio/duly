@@ -17,8 +17,8 @@ export default function AuthRoute() {
   const form = useForm({
     initialValues: {
       identifier: "",
-      password: ""
-    }
+      password: "",
+    },
   })
   const submit = useSubmit()
 
