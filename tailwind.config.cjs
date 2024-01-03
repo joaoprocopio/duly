@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+/** @satisfies {import('tailwindcss').Config} */
 const config = {
   content: ["app/**/*.{ts,tsx}"],
   theme: {

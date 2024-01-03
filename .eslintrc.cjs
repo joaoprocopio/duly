@@ -1,20 +1,20 @@
 require("@rushstack/eslint-config/patch/modern-module-resolution")
 
-/** @type {import('eslint').Linter.Config} */
+/** @satisfies {import('eslint').Linter.Config} */
 const config = {
   root: true,
   parser: "@typescript-eslint/parser",
   env: {
     browser: true,
     commonjs: true,
-    es6: true
+    es6: true,
   },
   parserOptions: {
     sourceType: "module",
     ecmaVersion: "latest",
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   plugins: ["@typescript-eslint", "import", "react", "jsx-a11y"],
   extends: [
@@ -26,23 +26,23 @@ const config = {
     "plugin:react/jsx-runtime",
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
   ],
   settings: {
     "react": {
-      version: "detect"
+      version: "detect",
     },
     "formComponents": ["Form"],
     "linkComponents": [
       { name: "Link", linkAttribute: "to" },
-      { name: "NavLink", linkAttribute: "to" }
+      { name: "NavLink", linkAttribute: "to" },
     ],
     "import/internal-regex": "^~/",
     "import/resolver": {
       typescript: true,
-      node: true
-    }
-  }
+      node: true,
+    },
+  },
 }
 
 module.exports = config
