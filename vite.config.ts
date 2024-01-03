@@ -10,12 +10,12 @@ export default defineConfig({
   plugins: [remix()],
   resolve: {
     alias: {
-      "~": fileURLToPath(new URL("./app", import.meta.url))
-    }
+      "~": fileURLToPath(new URL("./app", import.meta.url)),
+    },
   },
   css: {
     modules: {
-      localsConvention: "camelCaseOnly"
-    }
-  }
+      localsConvention: "camelCaseOnly",
+    },
+  },
 })
