@@ -42,7 +42,7 @@ export default function Root() {
 
       <body>
         <MantineProvider theme={theme}>
-          <AppShell header={{ height: 64 }}>
+          <AppShell>
             <Outlet />
             <ScrollRestoration />
             <Scripts />
