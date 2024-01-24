@@ -7,10 +7,10 @@ installGlobals()
 
 export default defineConfig({
   envPrefix: "_",
-  plugins: [remix()],
+  plugins: [remix({ appDirectory: "./src" })],
   resolve: {
     alias: {
-      "~": fileURLToPath(new URL("./app", import.meta.url)),
+      "~": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
   css: {

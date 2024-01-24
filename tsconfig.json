@@ -14,7 +14,7 @@
     "forceConsistentCasingInFileNames": true,
 
     "paths": {
-      "~/*": ["./app/*"]
+      "~/*": ["./src/*"]
     }
   }
 }
