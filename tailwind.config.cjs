@@ -1,10 +1,6 @@
 /** @satisfies {import('tailwindcss').Config} */
 const config = {
-  content: ["src/**/*.{ts,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+  content: ["./src/**/*.{ts,tsx}"],
 }
 
 module.exports = config

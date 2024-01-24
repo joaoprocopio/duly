@@ -7,15 +7,14 @@ installGlobals()
 
 export default defineConfig({
   envPrefix: "_",
-  plugins: [remix({ appDirectory: "./src" })],
+  plugins: [
+    remix({
+      appDirectory: "./src",
+    }),
+  ],
   resolve: {
     alias: {
       "~": fileURLToPath(new URL("./src", import.meta.url)),
-    },
-  },
-  css: {
-    modules: {
-      localsConvention: "camelCaseOnly",
     },
   },
 })
