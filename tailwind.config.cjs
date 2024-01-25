@@ -1,6 +1,6 @@
 /** @satisfies {import('tailwindcss').Config} */
 const config = {
-  content: ["./src/**/*.{ts,tsx}"],
+  content: ["./app/**/*.{ts,tsx}"],
 }
 
 module.exports = config
