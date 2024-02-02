@@ -3,12 +3,13 @@ require("@rushstack/eslint-config/patch/modern-module-resolution")
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
-  parser: "@typescript-eslint/parser",
+
   env: {
     browser: true,
     commonjs: true,
     es6: true,
   },
+
   parserOptions: {
     sourceType: "module",
     ecmaVersion: "latest",
@@ -16,31 +17,64 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ["@typescript-eslint", "import", "react", "jsx-a11y"],
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/recommended",
-    "plugin:import/typescript",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended",
+
+  extends: ["eslint:recommended", "plugin:prettier/recommended"],
+  // "plugin:react-hooks/recommended",
+  overrides: [
+    // React
+    {
+      files: ["**/*.{ts,tsx}"],
+      plugins: ["react", "jsx-a11y"],
+      extends: [
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:react-hooks/recommended",
+        "plugin:jsx-a11y/recommended",
+      ],
+      settings: {
+        "react": {
+          version: "detect",
+        },
+        "formComponents": ["Form"],
+        "linkComponents": [
+          { name: "Link", linkAttribute: "to" },
+          { name: "NavLink", linkAttribute: "to" },
+        ],
+        "import/resolver": {
+          typescript: {},
+        },
+      },
+    },
+
+    // Typescript
+    {
+      files: ["**/*.{ts,tsx}"],
+      plugins: ["@typescript-eslint", "import"],
+      parser: "@typescript-eslint/parser",
+      settings: {
+        "import/internal-regex": "^~/",
+        "import/resolver": {
+          node: {
+            extensions: [".ts", ".tsx"],
+          },
+          typescript: {
+            alwaysTryTypes: true,
+          },
+        },
+      },
+      extends: [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+      ],
+    },
+
+    // Node
+    {
+      files: [".eslintrc.js"],
+      env: {
+        node: true,
+      },
+    },
   ],
-  settings: {
-    "react": {
-      version: "detect",
-    },
-    "formComponents": ["Form"],
-    "linkComponents": [
-      { name: "Link", linkAttribute: "to" },
-      { name: "NavLink", linkAttribute: "to" },
-    ],
-    "import/internal-regex": "^~/",
-    "import/resolver": {
-      typescript: true,
-      node: true,
-    },
-  },
 }
