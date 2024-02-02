@@ -19,7 +19,7 @@ module.exports = {
   },
 
   extends: ["eslint:recommended", "plugin:prettier/recommended"],
-  // "plugin:react-hooks/recommended",
+
   overrides: [
     // React
     {

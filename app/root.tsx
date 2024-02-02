@@ -1,7 +1,6 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node"
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -47,10 +46,9 @@ export default function Root() {
         <Links />
       </head>
       <body className="min-h-screen antialiased">
-        <Outlet />
         <ScrollRestoration />
+        <Outlet />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   )

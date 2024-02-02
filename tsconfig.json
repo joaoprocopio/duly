@@ -13,6 +13,8 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
 
+    "types": ["@remix-run/node", "vite/client"],
+
     "paths": {
       "~/*": ["./app/*"]
     }

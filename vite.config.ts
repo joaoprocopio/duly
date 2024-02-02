@@ -8,6 +8,9 @@ installGlobals()
 export default defineConfig({
   envPrefix: "_",
   plugins: [remix()],
+  server: {
+    port: 3000,
+  },
   resolve: {
     alias: {
       "~": fileURLToPath(new URL("./app", import.meta.url)),
