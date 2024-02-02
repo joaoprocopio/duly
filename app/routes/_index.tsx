@@ -5,8 +5,8 @@ import { Label } from "~/components/ui/label"
 
 export default function Home() {
   return (
-    <div className="container relative h-[100vh] flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
-      <div className="relative hidden h-full flex-col bg-muted p-10 text-white lg:flex dark:border-r">
+    <div className="container relative grid h-[100vh] flex-col items-center justify-center lg:max-w-none lg:grid-cols-2 lg:px-0">
+      <div className="bg-muted relative hidden h-full flex-col p-10 text-white dark:border-r lg:flex">
         <div className="absolute inset-0 bg-zinc-900" />
         <div className="relative z-20 flex items-center text-lg font-medium">
           <svg
@@ -39,7 +39,7 @@ export default function Home() {
             <h1 className="text-2xl font-semibold tracking-tight">
               Create an account
             </h1>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               Enter your email below to create your account
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function Home() {
                 <span className="w-full border-t" />
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-background px-2 text-muted-foreground">
+                <span className="bg-background text-muted-foreground px-2">
                   Or continue with
                 </span>
               </div>
@@ -76,17 +76,17 @@ export default function Home() {
               Google
             </Button>
           </div>
-          <p className="px-8 text-center text-sm text-muted-foreground">
+          <p className="text-muted-foreground px-8 text-center text-sm">
             By clicking continue, you agree to our{" "}
             <Link
               to="/terms"
-              className="underline underline-offset-4 hover:text-primary">
+              className="hover:text-primary underline underline-offset-4">
               Terms of Service
             </Link>{" "}
             and{" "}
             <Link
               to="/privacy"
-              className="underline underline-offset-4 hover:text-primary">
+              className="hover:text-primary underline underline-offset-4">
               Privacy Policy
             </Link>
             .

@@ -6,4 +6,6 @@ module.exports = {
   trailingComma: "all",
   printWidth: 80,
   quoteProps: "consistent",
+  plugins: ["prettier-plugin-tailwindcss"],
+  tailwindFunctions: ["clsx", "cva"],
 }
