@@ -1,7 +1,7 @@
 require("@rushstack/eslint-config/patch/modern-module-resolution")
 
-/** @satisfies {import('eslint').Linter.Config} */
-const config = {
+/** @type {import('eslint').Linter.Config} */
+module.exports = {
   root: true,
   parser: "@typescript-eslint/parser",
   env: {
@@ -44,5 +44,3 @@ const config = {
     },
   },
 }
-
-module.exports = config

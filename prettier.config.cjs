@@ -1,11 +1,9 @@
-/** @satisfies {import("prettier").Config} */
-const config = {
+/** @type {import("prettier").Config} */
+module.exports = {
   semi: false,
   singleQuote: false,
   bracketSameLine: true,
   trailingComma: "all",
-  printWidth: 100,
+  printWidth: 80,
   quoteProps: "consistent",
 }
-
-module.exports = config
