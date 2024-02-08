@@ -44,13 +44,12 @@ export const links: LinksFunction = () => [
 
 export default function Root() {
   return (
-    // TODO: trocar pra pt-br
-    <html lang="en">
+    <html lang="pt-br">
       <head>
         <Meta />
         <Links />
       </head>
-      <body className="min-h-screen antialiased">
+      <body>
         <ScrollRestoration />
         <Outlet />
         <Scripts />
