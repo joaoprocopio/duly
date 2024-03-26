@@ -6,18 +6,18 @@ import { defineConfig } from "vite"
 installGlobals()
 
 export default defineConfig({
-  plugins: [
-    remix({
-      appDirectory: fileURLToPath(new URL("./src", import.meta.url)),
-    }),
-  ],
-  server: {
-    port: 3000,
-  },
-  resolve: {
-    alias: {
-      "~": fileURLToPath(new URL("./src", import.meta.url)),
-      "~~": fileURLToPath(new URL("./", import.meta.url)),
+    plugins: [
+        remix({
+            appDirectory: fileURLToPath(new URL("./src", import.meta.url)),
+        }),
+    ],
+    server: {
+        port: 3000,
     },
-  },
+    resolve: {
+        alias: {
+            "~": fileURLToPath(new URL("./src", import.meta.url)),
+            "~~": fileURLToPath(new URL("./", import.meta.url)),
+        },
+    },
 })
