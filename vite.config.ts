@@ -1,4 +1,4 @@
-import { unstable_vitePlugin as remix } from "@remix-run/dev"
+import { vitePlugin as remix } from "@remix-run/dev"
 import { installGlobals } from "@remix-run/node"
 import { fileURLToPath, URL } from "node:url"
 import { defineConfig } from "vite"
@@ -6,14 +6,18 @@ import { defineConfig } from "vite"
 installGlobals()
 
 export default defineConfig({
-  envPrefix: "_",
-  plugins: [remix()],
+  plugins: [
+    remix({
+      appDirectory: fileURLToPath(new URL("./src", import.meta.url)),
+    }),
+  ],
   server: {
     port: 3000,
   },
   resolve: {
     alias: {
-      "~": fileURLToPath(new URL("./app", import.meta.url)),
+      "~": fileURLToPath(new URL("./src", import.meta.url)),
+      "~~": fileURLToPath(new URL("./", import.meta.url)),
     },
   },
 })

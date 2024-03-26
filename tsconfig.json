@@ -1,22 +1,17 @@
 {
   "extends": "@tsconfig/vite-react/tsconfig.json",
-
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"],
-
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": ".",
-
     "target": "ES2022",
-
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-
     "types": ["@remix-run/node", "vite/client"],
-
     "paths": {
-      "~/*": ["./app/*"]
+      "~/*": ["./src/*"],
+      "~~/*": ["./*"]
     }
   }
 }
