@@ -17,7 +17,7 @@ export const meta: MetaFunction = () => [
     content: "width=device-width, initial-scale=1",
   },
   {
-    title: "Molecule",
+    title: "Duly",
   },
 ]
 
@@ -42,7 +42,7 @@ export const links: LinksFunction = () => [
   },
 ]
 
-export default function Root() {
+export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-br">
       <head>
@@ -50,10 +50,14 @@ export default function Root() {
         <Links />
       </head>
       <body>
+        {children}
         <ScrollRestoration />
-        <Outlet />
         <Scripts />
       </body>
     </html>
   )
+}
+
+export default function Root() {
+  return <Outlet />
 }
